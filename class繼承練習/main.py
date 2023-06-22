@@ -12,37 +12,37 @@ your_name = input("選擇名子 : ")
 you = warrior(your_name)
 girl = monster("桃乃木香奈")
 """
-import module
-your_name = input("選擇名子 : ")
-you = module.warrior(your_name)
-girl = module.monster("桃乃木香奈")
 
 
-隨機 = random.choice([1,2])
+玩家姓名 = input("請輸入你的姓名：")
+玩家 = 戰士(玩家姓名)
+敵方 = 魔物("哥布林")
+隨機 = random.choice([1, 2])
+
 
 while True:
-    
-    攻擊指令 = int(input("請選擇姿勢(1)狗喝水(2)歡喜佛："))
-    攻擊力 = you.attack(攻擊指令)
-    失血 = int(girl.active(隨機) * 攻擊力)
-    girl.power -= 失血
-    
-    if girl.power <= 0:
-        print(f"{you.name}成功用棒棒征服了{girl.name}")
-        break
+    攻擊指令 = int(input("請輸入您的攻擊指令(1)普通攻擊(2)特殊攻擊："))
+    玩家攻擊力 = 玩家.攻擊(攻擊指令)
+    損血 = int(敵方.防禦(隨機) * 玩家攻擊力)
+    敵方.生命值 -= 損血
+
+
+    if 敵方.生命值 <= 0:
+      print(f"{敵方.姓名}倒下了，{玩家.姓名}勝利！！")
+      break
     else:
-        print(f"{girl.name}消耗體力{失血}!距離高潮還有{girl.power}")
-        print("--------------------------------")
-        
-        
-    防禦指令 = int(input("請選擇防禦姿勢(1)69(2)傳教士："))
-    敵人攻擊力 = girl.attack(攻擊指令)
-    失血 = int(you.active(隨機) * 攻擊力)
-    you.power -= 失血
-    
-    if you.power <= 0:
-        print(f"{girl.name}成功用鮑魚征服了{you.name}")
-        break
+      print(f"{敵方.姓名}受到了 {損血} 傷害！生命值剩下 {敵方.生命值}")
+      print("")
+
+    防禦指令 = int(input("請輸入您的防禦指令(1)格擋(2)閃避："))
+    敵方攻擊力 = 敵方.攻擊(隨機)
+    損血 = int(玩家.防禦(防禦指令) * 敵方攻擊力)
+    玩家.生命值 -= 損血
+
+
+    if 玩家.生命值 <= 0:
+      print(f"{玩家.姓名}受傷過重倒下了，遊戲結束 ~")
+      break
     else:
-        print(f"{you.name}消耗體力{失血}!距離高潮還有{you.power}")
-        print("--------------------------------1")
+      print(f"{玩家.姓名}受到了 {損血} 傷害！生命值剩下 {玩家.生命值}")
+      print("")
