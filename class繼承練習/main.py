@@ -6,13 +6,13 @@ Created on Sat May 20 23:25:16 2023
 """
 
 import random
-""" 
+
 from  module import *
+"""
 your_name = input("選擇名子 : ")
 you = warrior(your_name)
 girl = monster("桃乃木香奈")
 """
-
 
 玩家姓名 = input("請輸入你的姓名：")
 玩家 = 戰士(玩家姓名)
