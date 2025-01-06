@@ -1,0 +1,11 @@
+## DC Meter
+
+**用途：**
+- 觀察 Logic Board 的 IO pins、DPS、PMU、GPMU 與 DV 當下的電壓/電流值
+- 可利用 DC-Meter 功能來觀察電壓與電流圖像化的資訊，包含最大值、最小值、平均值與準確度等資訊
+- 屬於 Pin Scan 的一部分（針對單一 Power Pin）
+
+**開啟方式：**
+1. 於 Pin Scan 界面
+2. 勾選 DC Meter
+3. 點選欲觀察之 Power Pin
