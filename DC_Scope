@@ -1,0 +1,10 @@
+## DC Scope
+
+**用途：**
+- 觀察 Power 上下電狀況（瞬間）
+- 可以觀察瞬間電壓/瞬間電流，其中包含 Rise/Fall Time
+- 一次只能看一個 User Driver 的狀態
+
+**開啟方式：**
+1. 在 Engineering Setting 界面點選 Force 指令
+2. 點選 DC Scope 按鈕即開啟
