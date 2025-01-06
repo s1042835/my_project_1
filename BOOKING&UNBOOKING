@@ -1,0 +1,28 @@
+BOOKING / UNBOOKING 是寫在 prg 檔案內任意一個地方。
+
+BOOKING / UNBOOKING的格式如下：
+
+BOOKING
+```plaintext
+@@BOOKING
+    open_short;
+    leakage;
+    function;
+    ……….
+    open_short;
+@@END_BOOKING
+```
+
+UNBOOKING (非量產使用，工程或 reduce 部份)
+```plaintext
+@@UNBOOKING    
+    ……….
+    standby;
+    ……….
+@@END_UNBOOKING
+```
+
+BOOKING 的使用方式如下：
+1. 程式測試名稱: PLAN NAME 
+2. 執行會依照 booking 順序
+3. 同一個 plan 名稱可執行多次
